@@ -193,4 +193,72 @@ body {
 
 .reveal.active {
     transform: translateY(0);
+
+}
+
+/* --- ADAPTACIÓN PARA MÓVILES (RESPONSIVE) --- */
+
+@media (max-width: 768px) {
+    /* Navegación */
+    .nav-container {
+        gap: 20px; /* Reducimos espacio en móvil */
+    }
+
+    .nav-group {
+        gap: 15px; /* Links más juntos */
+    }
+
+    .nav-item {
+        font-size: 8px; /* Texto más pequeño para que no se encime */
+        letter-spacing: 1px;
+    }
+
+    .logo-img {
+        height: 35px; /* Logo un poco más pequeño */
+    }
+
+    /* Hero */
+    .brand-title {
+        font-size: 50px; /* Tamaño manejable en pantallas verticales */
+    }
+
+    .tagline {
+        font-size: 18px;
+        letter-spacing: 8px;
+    }
+
+    /* Grid de Servicios (Lo más importante) */
+    .services-grid {
+        grid-template-columns: 1fr; /* Una sola columna en lugar de dos */
+        padding: 10px;
+    }
+
+    .service-card {
+        height: 60vh; /* Reducimos la altura para que el scroll no sea infinito */
+    }
+
+    .card-text h3 {
+        font-size: 30px;
+        letter-spacing: 3px;
+    }
+
+    /* Redes Sociales */
+    .social-grid {
+        gap: 40px;
+    }
+
+    /* Estado contraído en móvil */
+    /* En móvil, moverlos 50px puede sacarlos de la pantalla, ajustamos a 30px */
+    .nav.scrolled .left { transform: translateX(30px); }
+    .nav.scrolled .right { transform: translateX(-30px); }
+}
+
+/* Ajuste para pantallas muy pequeñas (iPhone SE, etc) */
+@media (max-width: 380px) {
+    .nav-container {
+        gap: 10px;
+    }
+    .nav-item {
+        letter-spacing: 0.5px;
+    }
 }
