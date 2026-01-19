@@ -39,3 +39,11 @@ window.addEventListener('scroll', () => {
 document.querySelector('.nav-logo').addEventListener('click', () => {
     nav.classList.toggle('scrolled');
 });
+
+// Soporte para dispositivos táctiles en las cartas de servicio
+const cards = document.querySelectorAll('.service-card');
+cards.forEach(card => {
+    card.addEventListener('touchstart', function() {
+        this.classList.toggle('active-hover');
+    });
+});
